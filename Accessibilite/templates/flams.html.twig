@@ -2,7 +2,17 @@
 
 {% block body %}
 
-    <h1>Welcome to the Flam's Page</h1>
-    <p>This is a page dedicated to Flam's.</p>
+    <h1 class="text-center font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
+    <p>Choisissez la composition de votre tarte</p>
 
+    <form action="{{ path('flams') }}" method="post">
+        <label for="ingredients">Ingrédients :</label>
+        <select id="ingredients" name="ingredients[]" multiple>
+            <option value="lardons">Lardons</option>
+            <option value="oignons">Oignons</option>
+            <option value="champignons">Champignons</option>
+            <option value="fromage">Fromage</option>
+        </select>
+        <button type="submit">Valider</button>
+    </form>
 {% endblock body %}
