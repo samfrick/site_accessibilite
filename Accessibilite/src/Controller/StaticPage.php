@@ -42,8 +42,23 @@ class StaticPage extends AbstractController
     }
 
 	#[Route('/footer', name: 'footer')]
-	public function footer(): Response
-	{
+	public function footer(): Response{
 		return $this->render('footer.html.twig');
+	}
+
+	#[Route('/cgu', name: 'cgu')]
+	public function cgu(): Response{
+		return $this->render('cgu.html.twig');
+	}
+
+	#[Route('/rgpd', name: 'rgpd')]
+	public function rgpd(): Response{
+		return $this->render('rgpd.html.twig');
+	}
+
+	#[Route('/mentionslegales', name: 'mentionslegales')]
+	public function mentionslegales(): Response
+	{
+		return $this->render('mentionslegales.html.twig');
 	}
 }
