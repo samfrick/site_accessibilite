@@ -12,4 +12,10 @@ class StaticPage extends AbstractController
 	{
 		return $this->render('Accueil.html.twig');
 	}
+
+	#[Route('/flams', name: 'flams')]
+	public function flams(): Response
+	{
+		return $this->render('flams.html.twig');
+	}
 }
