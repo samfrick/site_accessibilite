@@ -1,18 +1,68 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+<h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
+<h2 class="h2">Composez votre tarte</h2>
 
-    <h1 class="text-center font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
-    <p>Choisissez la composition de votre tarte</p>
-
-    <form action="{{ path('flams') }}" method="post">
-        <label for="ingredients">Ingrédients :</label>
-        <select id="ingredients" name="ingredients[]" multiple>
-            <option value="lardons">Lardons</option>
-            <option value="oignons">Oignons</option>
-            <option value="champignons">Champignons</option>
-            <option value="fromage">Fromage</option>
+<form action="{{ path('flams') }}" method="post" class="form">
+    <fieldset class="fieldset">
+        <label for="taille" class="legend h3">Choisissez la taille :</label>
+        <select id="taille" name="taille" class="border border-gray-300 rounded py-1 px-2">
+            <option value="petite">Petite</option>
+            <option value="moyenne">Moyenne</option>
+            <option value="grande">Grande</option>
         </select>
-        <button type="submit">Valider</button>
-    </form>
+    </fieldset>
+    <fieldset class="fieldset">
+        <legend class="legend h3">Choisissez les ingrédients :</legend>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <input type="checkbox" id="lardons" name="ingredients" value="lardons">
+                <label for="lardons">Lardons</label>
+            </div>
+            <div>
+                <input type="checkbox" id="crème" name="ingredients" value="crème">
+                <label for="crème">Crème</label>
+            </div>
+            <div>
+                <input type="checkbox" id="fromage" name="ingredients" value="fromage">
+                <label for="fromage">Fromage</label>
+            </div>
+            <div>
+                <input type="checkbox" id="champignons" name="ingredients" value="champignons">
+                <label for="champignons">Champignons</label>
+            </div>
+            <div>
+                <input type="checkbox" id="munster" name="ingredients" value="munster">
+                <label for="munster">Munster</label>
+            </div>
+            <div>
+                <input type="checkbox" id="patates" name="ingredients" value="patates">
+                <label for="patates">Pommes de terre</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="fieldset">
+        <legend class="legend h3">Choisissez les toppings :</legend>
+        <div class="grid grid-cols-2 gap-4">
+            <div>
+                <input type="checkbox" id="persil" name="toppings" value="persil">
+                <label for="persil">Persil</label>
+            </div>
+            <div>
+                <input type="checkbox" id="poivre" name="toppings" value="poivre">
+                <label for="poivre">Poivre</label>
+            </div>
+            <div>
+                <input type="checkbox" id="oignons" name="toppings" value="oignons">
+                <label for="oignons">Oignons</label>
+            </div>
+            <div>
+                <input type="checkbox" id="échalotes" name="toppings" value="échalotes">
+                <label for="échalotes">Échalotes</label>
+            </div>
+        </div>
+    </fieldset>
+    <button class="btn btn-secondary" type="submit">Valider</button>
+</form>
 {% endblock body %}
