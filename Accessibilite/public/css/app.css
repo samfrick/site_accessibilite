@@ -1,7 +1,7 @@
 /* VARIABLES CSS */
 :root {
     --color-primary: #4A90E2;
-    --color-secondary: #50E3C2;
+    --color-secondary: #2fa78d;
     --color-background: #F5F7FA;
     --color-text: #333333;
     --font-size-base: 16px;
@@ -13,7 +13,6 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     margin: 0;
-    padding: var(--spacing-base);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,10 +36,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
 }
 
-.label {
+.legend {
     font-weight: bold;
     display: block;
-    margin-bottom: calc(var(--spacing-base) / 4);
+    margin-bottom: 1rem;
 }
 
 .form {
@@ -50,4 +49,32 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--spacing-base);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fieldset {
+    padding-bottom: 2rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: #ffffff;
 }
