@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Site accessibilité!{% endblock %}</title>
+        <title>{% block title %}Site accessibilité{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         {% block stylesheets %}
@@ -14,11 +14,52 @@
     <body>
 
         {% block header %}
+    <header role="header">
+        <nav class="bg-stone-100 p-4" aria-label="Breadcrumb" class="breadcrumb" role="navigation">
+          <div class="flex items-center">
+            <!-- Titre à gauche -->
+            <a href="{{ path('home') }}" class="text-xl font-bold text-gray-900 mr-8">Site accessibilité</a>
 
-        <a href="{{ path('footer') }}">page du footer</a>
-
+            <!-- Menu au centre -->
+            <ul class="flex space-x-8 ml-auto mr-auto">
+              <li class="relative group border-l-0 first:border-l-2 border-l-2 border-[#3ca0e7] pl-4">
+                <a href="#" class="text-black hover:text-[#3ca0e7] focus:text-[#3ca0e7] font-semibold transition-colors">France &dtrif;</a>
+                <ul class="absolute left-0 mt-5 min-w-[250px] bg-white rounded shadow-[0_3px_5px_-1px_#ccc] opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-300 z-10 pt-5 text-left">
+                  <li class="mb-5 w-full border-0 clear-both">
+                    <a href="{{ path('flams') }}" class="block px-4 py-2 text-gray-800 hover:text-[#3ca0e7] hover:pl-6 hover:border-l-2 hover:border-[#3ca0e7] transition-all duration-300">Flams</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group border-l-2 border-[#3ca0e7] pl-4">
+                <a href="#" class="text-black hover:text-[#3ca0e7] focus:text-[#3ca0e7] font-semibold transition-colors">Réunion &dtrif;</a>
+                <ul class="absolute left-0 mt-5 min-w-[250px] bg-white rounded shadow-[0_3px_5px_-1px_#ccc] opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-300 z-10 pt-5 text-left">
+                  <li class="mb-5 w-full border-0 clear-both">
+                    <a href="{{ path('americain') }}" class="block px-4 py-2 text-gray-800 hover:text-[#3ca0e7] hover:pl-6 hover:border-l-2 hover:border-[#3ca0e7] transition-all duration-300">Américain Bouchons</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group border-l-2 border-[#3ca0e7] pl-4">
+                <a href="#" class="text-black hover:text-[#3ca0e7] focus:text-[#3ca0e7] font-semibold transition-colors">Pologne &dtrif;</a>
+                <ul class="absolute left-0 mt-5 min-w-[250px] bg-white rounded shadow-[0_3px_5px_-1px_#ccc] opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-300 z-10 pt-5 text-left">
+                  <li class="mb-5 w-full border-0 clear-both">
+                    <a href="{{ path('pierogi') }}" class="block px-4 py-2 text-gray-800 hover:text-[#3ca0e7] hover:pl-6 hover:border-l-2 hover:border-[#3ca0e7] transition-all duration-300">Pierogi</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="relative group border-l-2 border-[#3ca0e7] pl-4">
+                <a href="#" class="text-black hover:text-[#3ca0e7] focus:text-[#3ca0e7] font-semibold transition-colors">Maurice &dtrif;</a>
+                <ul class="absolute left-0 mt-5 min-w-[250px] bg-white rounded shadow-[0_3px_5px_-1px_#ccc] opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-300 z-10 pt-5 text-left">
+                  <li class="mb-5 w-full border-0 clear-both">
+                    <a href="{{ path('dahl') }}" class="block px-4 py-2 text-gray-800 hover:text-[#3ca0e7] hover:pl-6 hover:border-l-2 hover:border-[#3ca0e7] transition-all duration-300">Dahl Puri</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        
+    </header>
         {% endblock %}
-
 
         {% block body %}
         
