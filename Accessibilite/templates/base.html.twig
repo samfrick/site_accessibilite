@@ -14,8 +14,8 @@
     </head>
     <body>
 
+        <header role="header">
         {% block header %}
-    <header role="header">
         <nav class="bg-stone-100 p-4" aria-label="Breadcrumb" class="breadcrumb" role="navigation">
           <div class="flex items-center">
             <!-- Titre à gauche -->
@@ -59,13 +59,16 @@
           </div>
         </nav>
         
+        {% endblock %}
     </header>
-        {% endblock %}
 
-        {% block body %}
+    <main>
+        {% block main %}
         
         {% endblock %}
+    </main>
 
-        
+        {% block footer %}
+        {% endblock %}
     </body>
 </html>

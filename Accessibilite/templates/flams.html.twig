@@ -1,18 +1,20 @@
 {% extends "base.html.twig" %}
 
-{% block body %}
+{% block main %}
 <h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
 <h2 class="h2">Composez votre tarte</h2>
 
 <form action="{{ path('flams') }}" method="post" class="form">
-    <fieldset class="fieldset">
+    <div class="fieldset">
         <label for="taille" class="legend h3">Choisissez la taille :</label>
         <select id="taille" name="taille" class="border border-gray-300 rounded py-1 px-2">
-            <option value="petite">Petite</option>
-            <option value="moyenne">Moyenne</option>
-            <option value="grande">Grande</option>
+            <optgroup label="Taille">
+                <option value="petite">Petite</option>
+                <option value="moyenne">Moyenne</option>
+                <option value="grande">Grande</option>
+            </optgroup>
         </select>
-    </fieldset>
+    </div>
     <fieldset class="fieldset">
         <legend class="legend h3">Choisissez les ingrédients :</legend>
         <div class="grid grid-cols-2 gap-4">
@@ -75,4 +77,4 @@
     </fieldset>
     <button class="btn btn-secondary" type="submit">Valider</button>
 </form>
-{% endblock body %}
+{% endblock main %}
