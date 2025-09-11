@@ -12,6 +12,14 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block body %}
+        
+        {% block header %}
+
+        <a href="{{ path('footer') }}">page footer</a>
+
+        {% endblock %}
+        
+        {% endblock %}
     </body>
 </html>
