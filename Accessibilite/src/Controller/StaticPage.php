@@ -37,7 +37,6 @@ class StaticPage extends AbstractController
 		return $this->render('dahl.html.twig');
 	}
 
-
 	#[Route('/footer', name: 'footer')]
 	public function footer(): Response
 	{
