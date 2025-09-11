@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
 {% block title %}Américain{% endblock %}
 
-{% block main %}
-    <div class="flex flex-col justify-center ">
-        <h1 class="h1 font-bold text-blue-600 dark:text-sky-400">L'américain</h1>
-        <p>Ceci est une page pour vous pésenter ce qu'est un américain bouchon</p>
-        <img src="/uploads/Américain.webp" alt="Ceci est un américain bouchon." class="w-1/4">
-        <video href="https://www.youtube.com/watch?v=kgKAesR0YGU"></video>
-        <h2 class="h2">Tableau des sandwichs américains disponibles</h2>
+{% block body %}
+    <div>
+        <a href="#"><h1 class="h1 font-bold text-blue-600 dark:text-sky-400">L'américain</h1></a>
+        <p>L’Américain est un incontournable des sandwichs réunionnais. Servi dans un pain généreux, il allie la gourmandise des frites croustillantes, le fondant du fromage, la fraîcheur des crudités et surtout la star de la recette : le bouchon, une petite bouchée de porc ou de poulet parfumée aux épices et à la ciboulette, très populaire sur l’île.
+
+C’est un sandwich copieux, savoureux et convivial, qui reflète parfaitement la culture culinaire de La Réunion : un mélange de générosité et de partage. Idéal pour les grandes faims, il se déguste aussi bien sur le pouce qu’entre amis.</p>
+        <img src="/uploads/Américain.webp" alt="Ceci est un américain bouchon." class="w-1/4 flex justify-center">
+        <div class="flex justify-center my-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/H_UJVbPMBiA?si=JOIkkMyVEyBjuq7K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+
+        <a href="#"><h2 class="h2">Tableau des sandwichs américains disponibles</h2></a>
         <a href="{{path('tableau')}}">tableau accessible</a>
         <table class="table-auto border-collapse border border-gray-400 w-full text-center">
   <thead class="bg-gray-200">
@@ -63,7 +69,7 @@
     </tr>
   </tbody>
 </table>
-
-
+        <a href="#"><h2 id="PostTableau">Pour commander : </h2></a>
+        <p>Nous ne prenons malheuresement plus les commandes en lignes. Retrouver donc tout nos sandwichs sur place au 9 Rue de Hybiscus à Lance de Fer 54100</p>
     </div>
 {% endblock %}
