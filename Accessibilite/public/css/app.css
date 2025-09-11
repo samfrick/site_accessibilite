@@ -78,3 +78,9 @@ input[type="checkbox"], input[type="radio"] {
     background-color: var(--color-secondary);
     color: #ffffff;
 }
+
+.img-ingredient {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2px;
+}
