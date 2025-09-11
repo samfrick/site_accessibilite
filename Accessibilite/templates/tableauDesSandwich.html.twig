@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}  
+{% block body %}
+<ul class="list-disc pl-6 space-y-4">
+  <li>
+    <strong>Base : Frites, fromage, jambon</strong>
+    <ul class="list-disc pl-6">
+      <li>
+        <strong>Classique</strong> — Crudités : tomate, salade — Viande : — — Prix : 4 €
+      </li>
+      <li>
+        <strong>Spécial Bouchon</strong> — Crudités : tomate, salade, herbes — Viande : bouchon — Prix : 7 €
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Base : Frites, fromage</strong>
+    <ul class="list-disc pl-6">
+      <li>
+        <strong>Poulet Pané</strong> — Crudités : salade, tomate — Viande : poulet pané — Prix : 5 €
+      </li>
+      <li>
+        <strong>Steak Fromager</strong> — Crudités : salade, tomate, herbes — Viande : steak — Prix : 6 €
+      </li>
+      <li>
+        <strong>Mix Merguez</strong> — Crudités : tomate, salade — Viande : merguez — Prix : 6 €
+      </li>
+      <li>
+        <strong>Sarcive Gourmand</strong> — Crudités : salade, tomate — Viande : sarcive — Prix : 7 €
+      </li>
+    </ul>
+  </li>
+</ul>
+<a href="{{path('americain')}}">Retour à la page</a>
+{% endblock %}

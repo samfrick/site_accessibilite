@@ -36,6 +36,10 @@ class StaticPage extends AbstractController
 	{
 		return $this->render('dahl.html.twig');
 	}
+    #[Route('/reunion/americain/tableauDesSandwich',name : 'tableau')]
+    public function tableau():Response{
+        return $this->render('tableauDesSandwich.html.twig');
+    }
 
 	#[Route('/footer', name: 'footer')]
 	public function footer(): Response

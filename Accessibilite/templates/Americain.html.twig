@@ -1,1 +1,69 @@
 {% extends 'base.html.twig' %}
+{% block title %}Américain{% endblock %}
+
+{% block body %}
+    <div class="flex flex-col justify-center ">
+        <h1 class="text-blue-600 dark:text-sky-400">L'américain</h1>
+        <p>Ceci est une page pour vous pésenter ce qu'est un américain bouchon</p>
+        <img src="/uploads/Américain.webp" alt="Ceci est un américain bouchon." class="w-1/4">
+        <video href="https://www.youtube.com/watch?v=kgKAesR0YGU"></video>
+        <h2>Tableau des sandwichs américains disponibles</h2>
+        <a href="{{path('tableau')}}">tableau accessible</a>
+        <table class="table-auto border-collapse border border-gray-400 w-full text-center">
+  <thead class="bg-gray-200">
+    <tr>
+      <th class="border border-gray-400 px-4 py-2">Base</th>
+      <th class="border border-gray-400 px-4 py-2">Nom du sandwich</th>
+      <th class="border border-gray-400 px-4 py-2">Crudités</th>
+      <th class="border border-gray-400 px-4 py-2">Viande</th>
+      <th class="border border-gray-400 px-4 py-2">Prix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Groupe : Frites + fromage + jambon -->
+    <tr>
+      <td class="border border-gray-400 px-4 py-2" rowspan="2">Frites, fromage, jambon</td>
+      <td class="border border-gray-400 px-4 py-2">Classique</td>
+      <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
+      <td class="border border-gray-400 px-4 py-2">—</td>
+      <td class="border border-gray-400 px-4 py-2">4 €</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-400 px-4 py-2">Spécial Bouchon</td>
+      <td class="border border-gray-400 px-4 py-2">Tomate, salade, herbes</td>
+      <td class="border border-gray-400 px-4 py-2">Bouchon</td>
+      <td class="border border-gray-400 px-4 py-2">7 €</td>
+    </tr>
+
+    <!-- Groupe : Frites + fromage -->
+    <tr>
+      <td class="border border-gray-400 px-4 py-2" rowspan="4">Frites, fromage</td>
+      <td class="border border-gray-400 px-4 py-2">Poulet Pané</td>
+      <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
+      <td class="border border-gray-400 px-4 py-2">Poulet pané</td>
+      <td class="border border-gray-400 px-4 py-2">5 €</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-400 px-4 py-2">Steak Fromager</td>
+      <td class="border border-gray-400 px-4 py-2">Salade, tomate, herbes</td>
+      <td class="border border-gray-400 px-4 py-2">Steak</td>
+      <td class="border border-gray-400 px-4 py-2">6 €</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-400 px-4 py-2">Mix Merguez</td>
+      <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
+      <td class="border border-gray-400 px-4 py-2">Merguez</td>
+      <td class="border border-gray-400 px-4 py-2">6 €</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-400 px-4 py-2">Sarcive Gourmand</td>
+      <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
+      <td class="border border-gray-400 px-4 py-2">Sarcive</td>
+      <td class="border border-gray-400 px-4 py-2">7 €</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    </div>
+{% endblock %}
