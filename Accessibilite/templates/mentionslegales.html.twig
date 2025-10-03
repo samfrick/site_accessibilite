@@ -1,85 +1,87 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-<div class="max-w-2xl mx-auto rounded-lg shadow-md mt-10 p-4 bg-white text-gray-800 leading-relaxed">
-  <h1 class="text-3xl font-bold mb-6 text-center">Mentions légales</h1>
+<main id="main-content" class="max-w-2xl mx-auto rounded-lg shadow-md mt-10 p-6 bg-white text-gray-800 leading-relaxed"
+    role="main">
+    <h1 class="text-3xl font-bold mb-6 text-center">Mentions légales</h1>
 
-  <!-- Éditeur du site -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Éditeur du site</h2>
-    <p>
-      Ce site est édité par :  
-      <br><strong>Nom de l’entreprise / Association</strong>  
-      <br>Adresse : 123 rue Exemple, 75000 Paris  
-      <br>Téléphone : +33 0 00 00 00 00  
-      <br>Email : <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a>  
-      <br>Numéro SIRET : 123 456 789 00010  
-      <br>Directeur de la publication : Jean Dupont
-    </p>
-  </section>
+    <!-- Éditeur du site -->
+    <section aria-labelledby="editeur" class="mb-6">
+        <h2 id="editeur" class="text-xl font-semibold mb-2">Éditeur du site</h2>
+        <ul class="list-none space-y-1">
+            <li><span class="font-semibold">Nom :</span> Nom de l’entreprise / Association</li>
+            <li><span class="font-semibold">Adresse :</span> 123 rue Exemple, 75000 Paris</li>
+            <li><span class="font-semibold">Téléphone :</span> +33 0 00 00 00 00</li>
+            <li><span class="font-semibold">Email :</span>
+                <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a>
+            </li>
+            <li><span class="font-semibold">Numéro SIRET :</span> 123 456 789 00010</li>
+            <li><span class="font-semibold">Directeur de la publication :</span> Jean Dupont</li>
+        </ul>
+    </section>
 
-  <!-- Hébergement -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Hébergement</h2>
-    <p>
-      Le site est hébergé par :  
-      <br><strong>Nom de l’hébergeur</strong>  
-      <br>Adresse de l’hébergeur  
-      <br>Téléphone : +33 0 00 00 00 00
-    </p>
-  </section>
+    <!-- Hébergement -->
+    <section aria-labelledby="hebergeur" class="mb-6">
+        <h2 id="hebergeur" class="text-xl font-semibold mb-2">Hébergement</h2>
+        <ul class="list-none space-y-1">
+            <li><span class="font-semibold">Hébergeur :</span> Nom de l’hébergeur</li>
+            <li><span class="font-semibold">Adresse :</span> Adresse de l’hébergeur</li>
+            <li><span class="font-semibold">Téléphone :</span> +33 0 00 00 00 00</li>
+        </ul>
+    </section>
 
-  <!-- Propriété intellectuelle -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Propriété intellectuelle</h2>
-    <p>
-      L’ensemble du contenu de ce site (textes, images, graphismes, logos, vidéos, icônes, etc.) 
-      est protégé par le droit d’auteur et les lois relatives à la propriété intellectuelle.  
-      Toute reproduction, représentation, modification ou distribution sans autorisation préalable 
-      est interdite.
-    </p>
-  </section>
 
-  <!-- Données personnelles -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Données personnelles</h2>
-    <p>
-      Les informations recueillies via les formulaires de ce site sont destinées exclusivement 
-      à un usage interne et ne seront en aucun cas transmises à des tiers sans votre accord.  
-      Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d’un droit 
-      d’accès, de rectification et de suppression de vos données personnelles.  
-      Pour exercer ce droit, contactez-nous à : 
-      <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a>.
-    </p>
-  </section>
+    <!-- Propriété intellectuelle -->
+    <section aria-labelledby="propriete" class="mb-6">
+        <h2 id="propriete" class="text-xl font-semibold mb-2">Propriété intellectuelle</h2>
+        <p>
+            L’ensemble du contenu de ce site (textes, images, graphismes, logos, vidéos, icônes, etc.)
+            est protégé par le droit d’auteur et les lois relatives à la propriété intellectuelle.
+            Toute reproduction, représentation, modification ou distribution sans autorisation préalable
+            est interdite.
+        </p>
+    </section>
 
-  <!-- Responsabilité -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Responsabilité</h2>
-    <p>
-      Nous mettons tout en œuvre pour assurer l’exactitude des informations publiées sur ce site.  
-      Toutefois, nous ne saurions être tenus responsables des erreurs ou omissions, ni des dommages 
-      directs ou indirects résultant de l’utilisation de ces informations.
-    </p>
-  </section>
+    <!-- Données personnelles -->
+    <section aria-labelledby="donnees" class="mb-6">
+        <h2 id="donnees" class="text-xl font-semibold mb-2">Données personnelles</h2>
+        <p>
+            Les informations recueillies via les formulaires de ce site sont destinées exclusivement
+            à un usage interne et ne seront en aucun cas transmises à des tiers sans votre accord.
+            Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d’un droit
+            d’accès, de rectification et de suppression de vos données personnelles.
+            Pour exercer ce droit, contactez-nous à
+            <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a>.
+        </p>
+    </section>
 
-  <!-- Liens externes -->
-  <section class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Liens externes</h2>
-    <p>
-      Ce site peut contenir des liens vers d’autres sites internet.  
-      Nous ne sommes pas responsables du contenu de ces sites tiers, ni de leurs pratiques en matière 
-      de confidentialité.
-    </p>
-  </section>
+    <!-- Responsabilité -->
+    <section aria-labelledby="responsabilite" class="mb-6">
+        <h2 id="responsabilite" class="text-xl font-semibold mb-2">Responsabilité</h2>
+        <p>
+            Nous mettons tout en œuvre pour assurer l’exactitude des informations publiées sur ce site.
+            Toutefois, nous ne saurions être tenus responsables des erreurs ou omissions, ni des dommages
+            directs ou indirects résultant de l’utilisation de ces informations.
+        </p>
+    </section>
 
-  <!-- Loi applicable -->
-  <section>
-    <h2 class="text-xl font-semibold mb-2">Loi applicable</h2>
-    <p>
-      Les présentes mentions légales sont régies par le droit français.  
-      En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.
-    </p>
-  </section>
-</div>
+    <!-- Liens externes -->
+    <section aria-labelledby="liens" class="mb-6">
+        <h2 id="liens" class="text-xl font-semibold mb-2">Liens externes</h2>
+        <p>
+            Ce site peut contenir des liens vers d’autres sites internet.
+            Nous ne sommes pas responsables du contenu de ces sites tiers, ni de leurs pratiques en matière
+            de confidentialité.
+        </p>
+    </section>
+
+    <!-- Loi applicable -->
+    <section aria-labelledby="loi" class="mb-6">
+        <h2 id="loi" class="text-xl font-semibold mb-2">Loi applicable</h2>
+        <p>
+            Les présentes mentions légales sont régies par le droit français.
+            En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.
+        </p>
+    </section>
+</main>
 {% endblock main %}
