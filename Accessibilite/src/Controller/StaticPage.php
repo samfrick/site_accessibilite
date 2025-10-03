@@ -57,8 +57,12 @@ class StaticPage extends AbstractController
 	}
 
 	#[Route('/mentionslegales', name: 'mentionslegales')]
-	public function mentionslegales(): Response
-	{
+	public function mentionslegales(): Response{
 		return $this->render('mentionslegales.html.twig');
+	}
+
+	#[Route('/accesibilite', name: 'accesibilite')]
+	public function accesibilite(): Response{
+		return $this->render('accesibilite.html.twig');
 	}
 }

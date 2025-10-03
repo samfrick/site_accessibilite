@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Accessibilité{% endblock %}
+
+{% block main %}
+<div class="max-w-2xl mx-auto rounded-lg shadow-md mt-10 p-4">
+  
+  <!-- Titre principal -->
+  <h1 class="text-3xl font-bold mb-6">Accessibilité</h1>
+
+  <p class="mb-6">
+    Nous nous engageons à rendre notre site accessible à toutes et à tous, 
+    conformément aux <abbr title="Web Content Accessibility Guidelines">WCAG 2.1</abbr> (niveau AA) 
+    et au Référentiel Général d’Amélioration de l’Accessibilité (<abbr title="Référentiel Général d’Amélioration de l’Accessibilité">RGAA</abbr>).
+  </p>
+
+  <!-- Principes appliqués -->
+  <section aria-labelledby="principes" class="mb-10">
+    <h2 id="principes" class="text-2xl font-semibold mb-4">Principes appliqués</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Navigation possible entièrement au clavier.</li>
+      <li>Compatibilité avec les lecteurs d’écran (structure logique et balises adaptées).</li>
+      <li>Contrastes de couleurs suffisants et absence d’information transmise uniquement par la couleur.</li>
+      <li>Texte redimensionnable sans perte de contenu ou de fonctionnalité.</li>
+      <li>Images et médias accompagnés d’alternatives textuelles et de sous-titres/transcriptions.</li>
+      <li>Formulaires accessibles avec des labels explicites et messages d’erreur clairs.</li>
+      <li>Structure cohérente des titres, menus et zones de contenu.</li>
+    </ul>
+  </section>
+
+  <!-- Déclaration -->
+  <section aria-labelledby="declaration" class="mb-10">
+    <h2 id="declaration" class="text-2xl font-semibold mb-4">Déclaration d’accessibilité</h2>
+    <p>
+      Nous travaillons à améliorer en continu l’accessibilité de notre site. 
+      Certaines pages peuvent encore présenter des difficultés que nous corrigerons progressivement.
+    </p>
+  </section>
+
+  <!-- Aide à la navigation -->
+  <section aria-labelledby="aide" class="mb-10">
+    <h2 id="aide" class="text-2xl font-semibold mb-4">Aide à la navigation</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li><kbd class="px-1 py-0.5 border rounded bg-gray-100">Ctrl</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">+</kbd> (Windows/Linux) ou <kbd class="px-1 py-0.5 border rounded bg-gray-100">Cmd</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">+</kbd> (Mac) : augmenter la taille du texte</li>
+      <li><kbd class="px-1 py-0.5 border rounded bg-gray-100">Ctrl</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">-</kbd> ou <kbd class="px-1 py-0.5 border rounded bg-gray-100">Cmd</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">-</kbd> : diminuer la taille</li>
+      <li><kbd class="px-1 py-0.5 border rounded bg-gray-100">Ctrl</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">0</kbd> ou <kbd class="px-1 py-0.5 border rounded bg-gray-100">Cmd</kbd> + <kbd class="px-1 py-0.5 border rounded bg-gray-100">0</kbd> : taille par défaut</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section aria-labelledby="contact" class="mb-10">
+    <h2 id="contact" class="text-2xl font-semibold mb-4">Contact</h2>
+    <p class="mb-2">
+      Si vous rencontrez une difficulté d’accès à un contenu ou un service, merci de nous le signaler :
+    </p>
+    <ul class="list-none space-y-2">
+      <li>Email : <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a></li>
+      <li>Téléphone : <a href="tel:+33000000000" class="text-blue-600 underline">+33 0 00 00 00 00</a></li>
+    </ul>
+  </section>
+
+  <!-- Recours -->
+  <section aria-labelledby="recours" class="mb-10">
+    <h2 id="recours" class="text-2xl font-semibold mb-4">Recours</h2>
+    <p>
+      Si vous constatez un défaut d’accessibilité qui vous empêche d’accéder à un contenu 
+      et que vous n’obtenez pas de réponse, vous pouvez contacter le 
+      <a href="https://www.defenseurdesdroits.fr" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
+        Défenseur des droits
+      </a>.
+    </p>
+  </section>
+
+</div>
+{% endblock %}
