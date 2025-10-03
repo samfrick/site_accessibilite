@@ -13,6 +13,12 @@ class StaticPage extends AbstractController
 		return $this->render('Accueil.html.twig');
 	}
 
+	#[Route('/france', name: 'france')]
+	public function france(): Response
+	{
+		return $this->render('france.html.twig');
+	}
+
 	#[Route('/france/flams', name: 'flams')]
 	public function flams(): Response
 	{
@@ -25,7 +31,7 @@ class StaticPage extends AbstractController
 		return $this->render('americain.html.twig');
 	}
 
-	#[Route('/reunion/', name: 'reunion')]
+	#[Route('/reunion', name: 'reunion')]
 	public function reunion(): Response
 	{
 		return $this->render('reunion.html.twig');
