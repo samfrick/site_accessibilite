@@ -1,38 +1,78 @@
 {% extends 'base.html.twig' %}
+
 {% block main %}
-<div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-8">
+<main id="main-content" class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md mt-8" role="main">
+    
+    <!-- Titre principal -->
     <h1 class="text-3xl font-bold mb-6 text-gray-900">Conditions Générales d'Utilisation</h1>
-    <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2 text-gray-800">1. Introduction</h2>
+
+    <!-- Introduction -->
+    <section aria-labelledby="intro" class="mb-6">
+        <h2 id="intro" class="text-xl font-semibold mb-2 text-gray-800">1. Introduction</h2>
         <p class="text-gray-700 leading-relaxed">
-            Bienvenue sur notre site. En accédant à ce site, vous acceptez les présentes Conditions Générales d'Utilisation (CGU). Veuillez les lire attentivement.
+            Bienvenue sur notre site. En accédant à ce site, vous acceptez les présentes 
+            Conditions Générales d'Utilisation (CGU). Veuillez les lire attentivement.
         </p>
     </section>
-    <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2 text-gray-800">2. Accessibilité</h2>
+
+    <!-- Accessibilité -->
+    <section aria-labelledby="accessibilite" class="mb-6">
+        <h2 id="accessibilite" class="text-xl font-semibold mb-2 text-gray-800">2. Accessibilité</h2>
         <p class="text-gray-700 leading-relaxed">
-            Nous nous engageons à rendre notre site accessible à tous les utilisateurs, y compris les personnes en situation de handicap. Si vous rencontrez des difficultés, contactez-nous pour que nous puissions améliorer votre expérience.
+            Nous nous engageons à rendre notre site accessible à tous les utilisateurs, 
+            y compris les personnes en situation de handicap.  
+            Si vous rencontrez des difficultés, 
+            <a href="#contact" class="text-blue-600 underline">contactez-nous</a> 
+            afin que nous puissions améliorer votre expérience.
         </p>
     </section>
-    <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2 text-gray-800">3. Utilisation du site</h2>
+
+    <!-- Utilisation du site -->
+    <section aria-labelledby="utilisation" class="mb-6">
+        <h2 id="utilisation" class="text-xl font-semibold mb-2 text-gray-800">3. Utilisation du site</h2>
         <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
             <li>Respectez les lois et règlements en vigueur.</li>
             <li>N'utilisez pas le site à des fins malveillantes ou frauduleuses.</li>
             <li>Ne tentez pas d'accéder aux données d'autres utilisateurs.</li>
         </ul>
     </section>
-    <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2 text-gray-800">4. Protection des données</h2>
+
+    <!-- Protection des données -->
+    <section aria-labelledby="donnees" class="mb-6">
+        <h2 id="donnees" class="text-xl font-semibold mb-2 text-gray-800">4. Protection des données</h2>
         <p class="text-gray-700 leading-relaxed">
-            Vos données personnelles sont protégées conformément à la réglementation en vigueur. Consultez notre politique de confidentialité pour plus d'informations.
+            Vos données personnelles sont protégées conformément à la réglementation en vigueur.  
+            Consultez notre 
+            <a href="/politique-confidentialite" class="text-blue-600 underline">
+                politique de confidentialité
+            </a> pour plus d'informations.
         </p>
     </section>
-    <section class="mb-6">
-        <h2 class="text-xl font-semibold mb-2 text-gray-800">5. Modification des CGU</h2>
+
+    <!-- Modification -->
+    <section aria-labelledby="modifications" class="mb-6">
+        <h2 id="modifications" class="text-xl font-semibold mb-2 text-gray-800">5. Modification des CGU</h2>
         <p class="text-gray-700 leading-relaxed">
-            Nous pouvons modifier ces CGU à tout moment. Les modifications seront publiées sur cette page et entreront en vigueur dès leur publication.
+            Nous pouvons modifier ces CGU à tout moment.  
+            Les modifications seront publiées sur cette page et entreront en vigueur dès leur publication.
         </p>
     </section>
-</div>
+
+    <!-- Contact -->
+    <section aria-labelledby="contact" id="contact" class="mt-10 border-t pt-6">
+        <h2 id="contact" class="text-xl font-semibold mb-2 text-gray-800">6. Contact</h2>
+        <p class="text-gray-700 leading-relaxed">
+            Pour toute question concernant ces CGU, vous pouvez nous contacter :  
+        </p>
+        <ul class="list-none space-y-2 text-gray-700">
+            <li>Email : 
+                <a href="mailto:contact@monsite.fr" class="text-blue-600 underline">contact@monsite.fr</a>
+            </li>
+            <li>Téléphone : 
+                <a href="tel:+33000000000" class="text-blue-600 underline">+33 0 00 00 00 00</a>
+            </li>
+        </ul>
+    </section>
+
+</main>
 {% endblock %}
