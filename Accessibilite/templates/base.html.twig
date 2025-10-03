@@ -6,6 +6,7 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="/css/app.css">
+        <script src="/js/form.js" defer></script>
         {% block stylesheets %}
         {% endblock %}
 
@@ -57,6 +58,9 @@
                     <a href="{{ path('dahl') }}" class="block px-4 py-2 text-gray-800 hover:text-[#3ca0e7] hover:pl-6 hover:border-l-2 hover:border-[#3ca0e7] transition-all duration-300">Dahl Puri</a>
                   </li>
                 </ul>
+              </li>
+              <li class="relative group border-l-2 border-[#3ca0e7] pl-4">
+                <a href="{{ path('contact') }}" class="text-black hover:text-[#3ca0e7] focus:text-[#3ca0e7] font-semibold transition-colors">Contact</a>
               </li>
             </ul>
             

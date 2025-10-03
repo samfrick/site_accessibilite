@@ -49,7 +49,7 @@ class StaticPage extends AbstractController
 	{
 		return $this->render('dahl.html.twig');
 	}
-	
+
     #[Route('/reunion/americain/tableauDesSandwich',name : 'tableau')]
     public function tableau():Response{
         return $this->render('tableauDesSandwich.html.twig');
@@ -78,5 +78,10 @@ class StaticPage extends AbstractController
 	#[Route('/accesibilite', name: 'accesibilite')]
 	public function accesibilite(): Response{
 		return $this->render('accesibilite.html.twig');
+	}
+
+	#[Route('/contact', name: 'contact')]
+	public function contact(): Response{
+		return $this->render('contact.html.twig');
 	}
 }
