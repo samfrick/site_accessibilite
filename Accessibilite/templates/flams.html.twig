@@ -2,7 +2,7 @@
 
 {% block main %}
 <!-- Début du fil d'arianne -->
-<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+<nav class="flex text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
     <ol class="inline-flex items-center space-x-1 md:space-x-3">
 
         <li class="inline-flex items-center">
@@ -27,80 +27,82 @@
     </ol>
 </nav>
 
-<h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
-<h2 class="h2">Composez votre tarte</h2>
-
-<form action="{{ path('flams') }}" method="post" class="form mb-8">
-    <div class="fieldset">
-        <label for="taille" class="legend h3">Choisissez la taille :</label>
-        <select id="taille" name="taille" class="border border-gray-300 rounded py-1 px-2">
-            <optgroup label="Taille">
-                <option value="petite">Petite</option>
-                <option value="moyenne">Moyenne</option>
-                <option value="grande">Grande</option>
-            </optgroup>
-        </select>
-    </div>
-    <fieldset class="fieldset">
-        <legend class="legend h3">Choisissez les ingrédients :</legend>
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <img src="/uploads/flams/lardon_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="lardons" name="ingredients" value="lardons">
-                <label for="lardons">Lardons</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/crème_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="crème" name="ingredients" value="crème">
-                <label for="crème">Crème</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/fromage_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="fromage" name="ingredients" value="fromage">
-                <label for="fromage">Fromage</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/champignon_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="champignons" name="ingredients" value="champignons">
-                <label for="champignons">Champignons</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/munster_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="munster" name="ingredients" value="munster">
-                <label for="munster">Munster</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/patate_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="patates" name="ingredients" value="patates">
-                <label for="patates">Pommes de terre</label>
-            </div>
+<div id="mainContent" class="text-center w-[80%] flex flex-col items-center mx-auto">
+    <h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
+    <h2 class="h2">Composez votre tarte</h2>
+    
+    <form action="{{ path('flams') }}" method="post" class="form mb-8 text-">
+        <div class="fieldset">
+            <label for="taille" class="legend h3">Choisissez la taille :</label>
+            <select id="taille" name="taille" class="border border-gray-300 rounded py-1 px-2">
+                <optgroup label="Taille">
+                    <option value="petite">Petite</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="grande">Grande</option>
+                </optgroup>
+            </select>
         </div>
-    </fieldset>
-    <fieldset class="fieldset">
-        <legend class="legend h3">Choisissez les toppings :</legend>
-        <div class="grid grid-cols-2 gap-4">
-            <div>
-                <img src="/uploads/flams/persil_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="persil" name="toppings" value="persil">
-                <label for="persil">Persil</label>
+        <fieldset class="fieldset">
+            <legend class="legend h3">Choisissez les ingrédients :</legend>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <img src="/uploads/flams/lardon_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="lardons" name="ingredients" value="lardons">
+                    <label for="lardons">Lardons</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/crème_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="crème" name="ingredients" value="crème">
+                    <label for="crème">Crème</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/fromage_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="fromage" name="ingredients" value="fromage">
+                    <label for="fromage">Fromage</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/champignon_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="champignons" name="ingredients" value="champignons">
+                    <label for="champignons">Champignons</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/munster_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="munster" name="ingredients" value="munster">
+                    <label for="munster">Munster</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/patate_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="patates" name="ingredients" value="patates">
+                    <label for="patates">Pommes de terre</label>
+                </div>
             </div>
-            <div>
-                <img src="/uploads/flams/poivre_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="poivre" name="toppings" value="poivre">
-                <label for="poivre">Poivre</label>
+        </fieldset>
+        <fieldset class="fieldset">
+            <legend class="legend h3">Choisissez les toppings :</legend>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <img src="/uploads/flams/persil_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="persil" name="toppings" value="persil">
+                    <label for="persil">Persil</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/poivre_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="poivre" name="toppings" value="poivre">
+                    <label for="poivre">Poivre</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/oignon_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="oignons" name="toppings" value="oignons">
+                    <label for="oignons">Oignons</label>
+                </div>
+                <div>
+                    <img src="/uploads/flams/echalote_flams.jpg" alt="" class="img-ingredient">
+                    <input type="checkbox" id="échalotes" name="toppings" value="échalotes">
+                    <label for="échalotes">Échalotes</label>
+                </div>
             </div>
-            <div>
-                <img src="/uploads/flams/oignon_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="oignons" name="toppings" value="oignons">
-                <label for="oignons">Oignons</label>
-            </div>
-            <div>
-                <img src="/uploads/flams/echalote_flams.jpg" alt="" class="img-ingredient">
-                <input type="checkbox" id="échalotes" name="toppings" value="échalotes">
-                <label for="échalotes">Échalotes</label>
-            </div>
-        </div>
-    </fieldset>
-    <button class="btn btn-secondary" type="submit">Valider</button>
-</form>
+        </fieldset>
+        <button class="btn btn-secondary" type="submit">Valider</button>
+    </form>
+</div>
 {% endblock main %}
