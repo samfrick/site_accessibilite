@@ -1,6 +1,32 @@
 {% extends "base.html.twig" %}
 
 {% block main %}
+<!-- Début du fil d'arianne -->
+<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+
+        <li class="inline-flex items-center">
+            <a href="{{ path('home') }}"
+                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+                Accueil
+            </a>
+            <span class="mx-2 text-gray-400">></span>
+        </li>
+
+        <li class="relative group focus-within:z-20">
+            <a href="{{ path('flams') }}"
+                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">France</a>
+            <span class="mx-2 text-gray-400">></span>
+        </li>
+
+        <li class="relative group focus-within:z-20">
+            <div class="flex items-center">
+                <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Flams</p>
+            </div>
+        </li>
+    </ol>
+</nav>
+
 <h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
 <h2 class="h2">Composez votre tarte</h2>
 
