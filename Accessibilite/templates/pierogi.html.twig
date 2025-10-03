@@ -1,4 +1,55 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
 
-{% block main %}
-{% endblock main %}
+{% block body %}
+
+    <h1>Pierogi page</h1>
+    <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    
+    <!-- Accueil -->
+    <li class="inline-flex items-center">
+      <a href="{{ path('home') }}" 
+         class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+        Accueil
+      </a>
+    </li>
+
+    <!-- France avec sous-menu -->
+    <li class="relative group focus-within:z-20">
+      <div class="flex items-center">
+        <span class="mx-2 text-gray-400">></span>
+        <button
+          type="button"
+          aria-haspopup="menu"
+          aria-expanded="false"
+          class="ml-1 text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7] focus:outline-none group-hover:text-[#3ca0e7]"
+        >
+          France <span class="ml-1">&#9662;</span>
+        </button>
+        <ul
+          class="absolute top-full left-0 min-w-[120px] bg-white rounded shadow-lg opacity-0 invisible 
+                 group-hover:opacity-100 group-hover:visible 
+                 group-focus-within:opacity-100 group-focus-within:visible 
+                 transition-all duration-200 z-10"
+          role="menu"
+        >
+          <li><a href="{{ path('flams') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">France</a></li>
+          <li><a href="{{ path('americain') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Réunion</a></li>
+          <li><a href="{{ path('pierogi') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Pologne</a></li>
+          <li><a href="{{ path('dahl') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Maurice</a></li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- affichage nom du plat -->
+    <li class="relative group focus-within:z-20">
+            <div class="flex items-center">
+                <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Pierogi</p>
+            </div>
+        </li>
+  </ol>
+</nav>
+
+<p>Les pierogi sont des raviolis traditionnels de la cuisine polonaise, considérés comme l'un des plats nationaux du pays. Ils se présentent sous la forme de demi-lunes réalisées à partir d'une pâte à base de farine, d'eau chaude, parfois enrichie d'œuf ou d'huile, puis farcies avec une grande variété d'ingrédients, aussi bien salés que sucrés.</p>
+
+{% endblock body %}
