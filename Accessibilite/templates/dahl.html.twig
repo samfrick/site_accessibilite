@@ -1,9 +1,12 @@
-{% extends "base.html.twig" %}
+{% extends 'base.html.twig' %}
+{% block title %}Américain{% endblock %}
+
 
 {% block main %}
+<!-- Skip link -->
 
-    <h1>Dahl Puri</h1>
-    <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+<!--Fil d'ariiane -->
+  <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">
     
     <!-- Accueil -->
@@ -14,7 +17,18 @@
       </a>
     </li>
 
-    <!-- France avec sous-menu -->
+    <!-- pays avec sous-menu -->
+    <li class="relative group focus-within:z-20">
+      <div class="flex items-center">
+        <span class="mx-2 text-gray-400">></span>
+
+          <li><a href="{{ path('reunion') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Ile Maurice</a></li>
+
+        </ul>
+      </div>
+    </li>
+
+    <!-- affichage nom du plat -->
     <li class="relative group focus-within:z-20">
       <div class="flex items-center">
         <span class="mx-2 text-gray-400">></span>
@@ -22,34 +36,19 @@
           type="button"
           aria-haspopup="menu"
           aria-expanded="false"
-          class="ml-1 text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7] focus:outline-none group-hover:text-[#3ca0e7]"
-        >
-          France <span class="ml-1">&#9662;</span>
-        </button>
-        <ul
-          class="absolute top-full left-0 min-w-[120px] bg-white rounded shadow-lg opacity-0 invisible 
-                 group-hover:opacity-100 group-hover:visible 
-                 group-focus-within:opacity-100 group-focus-within:visible 
-                 transition-all duration-200 z-10"
-          role="menu"
-        >
-          <li><a href="{{ path('flams') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">France</a></li>
-          <li><a href="{{ path('americain') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Réunion</a></li>
-          <li><a href="{{ path('pierogi') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Pologne</a></li>
-          <li><a href="{{ path('dahl') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Maurice</a></li>
-        </ul>
+          class="ml-1 text-gray-600">
+          Dhal Puri <span class="ml-1"></span>
+        </button> 
       </div>
     </li>
-
-    <!-- affichage nom du plat -->
-    <li class="relative group focus-within:z-20">
-            <div class="flex items-center">
-                <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Dhal Puri</p>
-            </div>
-        </li>
   </ol>
 </nav>
+<!--Fin du fil d'arianne-->
+
+<p>Le dahl puri est une galette (un puri) à 
+  base de pois cassés (dal) originaire d'Inde, qui fait partie de la cuisine mauricienne et de la cuisine antillaise. 
+  Dhal puri. Le dholl puri est une icône à Maurice.</p>
 
 
-<p>Le dhal puri est un pain plat fin et sans levain, fourré d'un mélange de pois cassés assaisonnés. C'est l'un des plats de rue les plus emblématiques de l'île Maurice et de certaines régions des Caraïbes, notamment Trinité-et-Tobago. Ce pain plat savoureux est traditionnellement préparé à partir de farine de blé et fourré de pois cassés jaunes cuits (appelés localement « dholl »), de cumin, de curcuma et de sel, avant d'être étalé et cuit sur une plaque chauffante. Il est généralement dégusté chaud et souvent accompagné de currys, de chutneys et de rougaille (une sauce à base de tomates).</p>
-{% endblock body %}
+
+{% endblock %}
