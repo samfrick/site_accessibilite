@@ -37,6 +37,11 @@ class StaticPage extends AbstractController
 		return $this->render('reunion.html.twig');
 	}
 
+	#[Route('/pologne', name: 'pologne')]
+	public function pologne(): Response
+	{
+		return $this->render('pologne.html.twig');
+	}
 
 	#[Route('/polonais/pierogi', name: 'pierogi')]
 	public function pierogi(): Response
