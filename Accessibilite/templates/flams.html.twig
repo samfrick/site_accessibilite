@@ -15,12 +15,6 @@
         </li>
 
         <li class="relative group focus-within:z-20">
-            <a href="{{ path('france') }}"
-                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">France</a>
-            <span class="mx-2 text-gray-400">></span>
-        </li>
-
-        <li class="relative group focus-within:z-20">
             <div class="flex items-center">
                 <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Flams</p>
             </div>
@@ -28,10 +22,11 @@
     </ol>
 </nav>
 
+<!-- Contenu principal de la page -->
 <div id="mainContent" class="text-center w-[80%] flex flex-col items-center mx-auto">
     <h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
     <h2 class="h2">Composez votre tarte</h2>
-    
+
     <form action="{{ path('flams') }}" method="post" class="form mb-8 text-left">
         <div class="fieldset">
             <label for="taille" class="legend h3">Choisissez la taille de votre tarte :</label>
@@ -106,4 +101,33 @@
         <button class="btn btn-secondary" type="submit">Valider</button>
     </form>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('.form');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // empêche l’envoi classique du formulaire
+
+            // Récupère la taille
+            const taille = document.getElementById('taille').value;
+
+            // Récupère les ingrédients cochés
+            const ingredients = Array.from(document.querySelectorAll('input[name="ingredients"]:checked'))
+                .map(el => el.value);
+
+            // Récupère les toppings cochés
+            const toppings = Array.from(document.querySelectorAll('input[name="toppings"]:checked'))
+                .map(el => el.value);
+
+            // Sauvegarde dans localStorage
+            localStorage.setItem('flam_taille', taille);
+            localStorage.setItem('flam_ingredients', JSON.stringify(ingredients));
+            localStorage.setItem('flam_toppings', JSON.stringify(toppings));
+
+            // Redirige vers la page de résumé
+            window.location.href = "{{ path('flams_summary') }}";
+        });
+    });
+</script>
 {% endblock main %}

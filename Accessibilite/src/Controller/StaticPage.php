@@ -13,16 +13,16 @@ class StaticPage extends AbstractController
 		return $this->render('Accueil.html.twig');
 	}
 
-	#[Route('/france', name: 'france')]
-	public function france(): Response
-	{
-		return $this->render('france.html.twig');
-	}
-
 	#[Route('/france/flams', name: 'flams')]
 	public function flams(): Response
 	{
 		return $this->render('flams.html.twig');
+	}
+
+	#[Route('/flams_summary', name: 'flams_summary')]
+	public function flams_summary(): Response
+	{
+		return $this->render('flams_summary.html.twig');
 	}
 
 	#[Route('/reunion/americain', name: 'americain')]
@@ -31,28 +31,10 @@ class StaticPage extends AbstractController
 		return $this->render('americain.html.twig');
 	}
 
-	#[Route('/reunion', name: 'reunion')]
-	public function reunion(): Response
-	{
-		return $this->render('reunion.html.twig');
-	}
-
-	#[Route('/pologne', name: 'pologne')]
-	public function pologne(): Response
-	{
-		return $this->render('pologne.html.twig');
-	}
-
 	#[Route('/polonais/pierogi', name: 'pierogi')]
 	public function pierogi(): Response
 	{
 		return $this->render('pierogi.html.twig');
-	}
-
-	#[Route('/maurice', name: 'maurice')]
-	public function maurice(): Response
-	{
-		return $this->render('maurice.html.twig');
 	}
 
 	#[Route('/maurice/dahl', name: 'dahl')]
@@ -94,5 +76,10 @@ class StaticPage extends AbstractController
 	#[Route('/contact', name: 'contact')]
 	public function contact(): Response{
 		return $this->render('contact.html.twig');
+	}
+
+	#[Route('/summary', name: 'summary')]
+	public function summary(): Response{
+		return $this->render('summary.html.twig');
 	}
 }
