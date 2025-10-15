@@ -6,28 +6,21 @@
 <!-- Skip link -->
 
 <!--Fil d'ariiane -->
-  <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">
-    
+
     <!-- Accueil -->
     <li class="inline-flex items-center">
-      <a href="{{ path('home') }}" 
-         class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+      <a href="{{ path('home') }}"
+        class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
         Accueil
       </a>
     </li>
-    
+
     <!-- affichage nom du plat -->
     <li class="relative group focus-within:z-20">
       <div class="flex items-center">
-        <span class="mx-2 text-gray-400">></span>
-        <button
-          type="button"
-          aria-haspopup="menu"
-          aria-expanded="false"
-          class="ml-1 text-gray-600">
-          Dhal Puri <span class="ml-1"></span>
-        </button> 
+        <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Dhal Puri</p>
       </div>
     </li>
   </ol>
@@ -35,30 +28,27 @@
 <!--Fin du fil d'arianne-->
 
 <div class="max-w-4xl mx-auto my-12 bg-white rounded-lg shadow-lg overflow-hidden">
-  
+
   <!-- Conteneur flex -->
   <div class="flex flex-col md:flex-row items-center gap-8 p-8">
-    
+
     <!-- Image -->
     <div class="flex-shrink-0">
-      <img 
-        src="/uploads/dhal-puri.webp" 
-        alt="Photo du Dhal Puri, une galette mauricienne traditionnelle" 
-        class="w-48 h-48 object-cover rounded-lg shadow-md"
-      >
+      <img src="/uploads/dhal-puri.webp" alt="Photo du Dhal Puri, une galette mauricienne traditionnelle"
+        class="w-48 h-48 object-cover rounded-lg shadow-md">
     </div>
 
     <!-- Texte -->
     <div class="text-gray-800 leading-relaxed">
       <h1 class="text-3xl font-bold text-blue-700 mb-4">Dhal Puri</h1>
       <p class="text-lg">
-        Le <strong>dahl puri</strong> est une galette moelleuse à base de <strong>pois cassés (dal)</strong>, 
-        originaire d’Inde. Il occupe une place emblématique dans la 
+        Le <strong>dahl puri</strong> est une galette moelleuse à base de <strong>pois cassés (dal)</strong>,
+        originaire d’Inde. Il occupe une place emblématique dans la
         <strong>cuisine mauricienne.</strong>
       </p>
       <p class="mt-4 text-lg">
-        Considéré comme une véritable <em>icône culinaire</em> à Maurice, 
-        le <strong>dholl puri</strong> se déguste généralement garni de caris, 
+        Considéré comme une véritable <em>icône culinaire</em> à Maurice,
+        le <strong>dholl puri</strong> se déguste généralement garni de caris,
         de chutneys et de piments, offrant un mélange savoureux et parfumé.
       </p>
     </div>

@@ -6,13 +6,13 @@
 <!-- Skip link -->
 
 <!--Fil d'ariiane -->
-  <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">
-    
+
     <!-- Accueil -->
     <li class="inline-flex items-center">
-      <a href="{{ path('home') }}" 
-         class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+      <a href="{{ path('home') }}"
+        class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
         Accueil
       </a>
     </li>
@@ -20,87 +20,91 @@
     <!-- affichage nom du plat -->
     <li class="relative group focus-within:z-20">
       <div class="flex items-center">
-        <span class="mx-2 text-gray-400">></span>
-        <button
-          class="ml-1 text-gray-600">
-          Américain <span class="ml-1"></span>
-        </button> 
+        <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Américain bouchon</p>
       </div>
     </li>
   </ol>
 </nav>
 <!--Fin du fil d'arianne-->
 
-    <div id="mainContent" class="flex flex-col justify-center items-center p-10">
-        <h1 class="h1 font-bold text-blue-600 dark:text-sky-400">L'américain</h1>
-        <p>L’Américain est un incontournable des sandwichs réunionnais. Servi dans un pain généreux, il allie la gourmandise des frites croustillantes, le fondant du fromage, la fraîcheur des crudités et surtout la star de la recette : le bouchon, une petite bouchée de porc ou de poulet parfumée aux épices et à la ciboulette, très populaire sur l’île.
-        C’est un sandwich copieux, savoureux et convivial, qui reflète parfaitement la culture culinaire de La Réunion : un mélange de générosité et de partage. Idéal pour les grandes faims, il se déguste aussi bien sur le pouce qu’entre amis.</p>
-       <div class="flex justify-between">
-          <img src="/uploads/Americain.webp" alt="Ceci est un américain bouchon." class="w-1/4 flex justify-center">
-          <div class="flex justify-center my-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/H_UJVbPMBiA?si=JOIkkMyVEyBjuq7K" title="YouTube video player présentation d'américain bouchon" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-       </div>
-
-
-
-        <h2 class="h2">Tableau des sandwichs américains disponibles</h2>
-        <a href="{{path('tableau')}}" class="underline text-blue-200 sr-only focus:not-sr-only">tableau accessible</a>
-        <table class="table-auto border-collapse border border-gray-400 w-full text-center">
-  <thead class="bg-gray-200">
-    <tr>
-      <th scope="col" class="border border-gray-400 px-4 py-2">Base</th>
-      <th scope="col" class="border border-gray-400 px-4 py-2">Nom du sandwich</th>
-      <th scope="col" class="border border-gray-400 px-4 py-2">Crudités</th>
-      <th scope="col" class="border border-gray-400 px-4 py-2">Viande</th>
-      <th scope="col" class="border border-gray-400 px-4 py-2">Prix</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Groupe : Frites + fromage + jambon -->
-    <tr>
-      <th scope="rowgroup" class="border border-gray-400 px-4 py-2" rowspan="2">Frites, fromage, jambon</th>
-      <td class="border border-gray-400 px-4 py-2">Classique</td>
-      <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
-      <td class="border border-gray-400 px-4 py-2">Sans viande</td>
-      <td class="border border-gray-400 px-4 py-2">4 €</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-400 px-4 py-2">Spécial Bouchon</td>
-      <td class="border border-gray-400 px-4 py-2">Tomate, salade, herbes</td>
-      <td class="border border-gray-400 px-4 py-2">Bouchon</td>
-      <td class="border border-gray-400 px-4 py-2">7 €</td>
-    </tr>
-
-    <!-- Groupe : Frites + fromage -->
-    <tr>
-      <th scope="rowgroup" class="border border-gray-400 px-4 py-2" rowspan="4">Frites, fromage</th>
-      <td class="border border-gray-400 px-4 py-2">Poulet Pané</td>
-      <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
-      <td class="border border-gray-400 px-4 py-2">Poulet pané</td>
-      <td class="border border-gray-400 px-4 py-2">5 €</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-400 px-4 py-2">Steak Fromager</td>
-      <td class="border border-gray-400 px-4 py-2">Salade, tomate, herbes</td>
-      <td class="border border-gray-400 px-4 py-2">Steak</td>
-      <td class="border border-gray-400 px-4 py-2">6 €</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-400 px-4 py-2">Mix Merguez</td>
-      <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
-      <td class="border border-gray-400 px-4 py-2">Merguez</td>
-      <td class="border border-gray-400 px-4 py-2">6 €</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-400 px-4 py-2">Sarcive Gourmand</td>
-      <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
-      <td class="border border-gray-400 px-4 py-2">Sarcive</td>
-      <td class="border border-gray-400 px-4 py-2">7 €</td>
-    </tr>
-  </tbody>
-</table>
-        <h2 id="PostTableau">Pour commander : </h2>
-        <p>Nous ne prenons malheuresement plus les commandes en lignes. Retrouver donc tout nos sandwichs sur place au 9 Rue de Hybiscus à Lance de Fer 54100</p>
+<div id="mainContent" class="flex flex-col justify-center items-center p-10">
+  <h1 class="h1 font-bold text-blue-600 dark:text-sky-400">L'américain</h1>
+  <p>L’Américain est un incontournable des sandwichs réunionnais. Servi dans un pain généreux, il allie la gourmandise
+    des frites croustillantes, le fondant du fromage, la fraîcheur des crudités et surtout la star de la recette : le
+    bouchon, une petite bouchée de porc ou de poulet parfumée aux épices et à la ciboulette, très populaire sur l’île.
+    C’est un sandwich copieux, savoureux et convivial, qui reflète parfaitement la culture culinaire de La Réunion : un
+    mélange de générosité et de partage. Idéal pour les grandes faims, il se déguste aussi bien sur le pouce qu’entre
+    amis.</p>
+  <div class="flex justify-between">
+    <img src="/uploads/Americain.webp" alt="Ceci est un américain bouchon." class="w-1/4 flex justify-center">
+    <div class="flex justify-center my-6">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/H_UJVbPMBiA?si=JOIkkMyVEyBjuq7K"
+        title="YouTube video player présentation d'américain bouchon" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+  </div>
+
+
+
+  <h2 class="h2">Tableau des sandwichs américains disponibles</h2>
+  <a href="{{path('tableau')}}" class="underline text-blue-200 sr-only focus:not-sr-only">tableau accessible</a>
+  <table class="table-auto border-collapse border border-gray-400 w-full text-center">
+    <thead class="bg-gray-200">
+      <tr>
+        <th scope="col" class="border border-gray-400 px-4 py-2">Base</th>
+        <th scope="col" class="border border-gray-400 px-4 py-2">Nom du sandwich</th>
+        <th scope="col" class="border border-gray-400 px-4 py-2">Crudités</th>
+        <th scope="col" class="border border-gray-400 px-4 py-2">Viande</th>
+        <th scope="col" class="border border-gray-400 px-4 py-2">Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Groupe : Frites + fromage + jambon -->
+      <tr>
+        <th scope="rowgroup" class="border border-gray-400 px-4 py-2" rowspan="2">Frites, fromage, jambon</th>
+        <td class="border border-gray-400 px-4 py-2">Classique</td>
+        <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
+        <td class="border border-gray-400 px-4 py-2">Sans viande</td>
+        <td class="border border-gray-400 px-4 py-2">4 €</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 px-4 py-2">Spécial Bouchon</td>
+        <td class="border border-gray-400 px-4 py-2">Tomate, salade, herbes</td>
+        <td class="border border-gray-400 px-4 py-2">Bouchon</td>
+        <td class="border border-gray-400 px-4 py-2">7 €</td>
+      </tr>
+
+      <!-- Groupe : Frites + fromage -->
+      <tr>
+        <th scope="rowgroup" class="border border-gray-400 px-4 py-2" rowspan="4">Frites, fromage</th>
+        <td class="border border-gray-400 px-4 py-2">Poulet Pané</td>
+        <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
+        <td class="border border-gray-400 px-4 py-2">Poulet pané</td>
+        <td class="border border-gray-400 px-4 py-2">5 €</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 px-4 py-2">Steak Fromager</td>
+        <td class="border border-gray-400 px-4 py-2">Salade, tomate, herbes</td>
+        <td class="border border-gray-400 px-4 py-2">Steak</td>
+        <td class="border border-gray-400 px-4 py-2">6 €</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 px-4 py-2">Mix Merguez</td>
+        <td class="border border-gray-400 px-4 py-2">Tomate, salade</td>
+        <td class="border border-gray-400 px-4 py-2">Merguez</td>
+        <td class="border border-gray-400 px-4 py-2">6 €</td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 px-4 py-2">Sarcive Gourmand</td>
+        <td class="border border-gray-400 px-4 py-2">Salade, tomate</td>
+        <td class="border border-gray-400 px-4 py-2">Sarcive</td>
+        <td class="border border-gray-400 px-4 py-2">7 €</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="PostTableau">Pour commander : </h2>
+  <p>Nous ne prenons malheuresement plus les commandes en lignes. Retrouver donc tout nos sandwichs sur place au 9 Rue
+    de Hybiscus à Lance de Fer 54100</p>
+</div>
 {% endblock %}
