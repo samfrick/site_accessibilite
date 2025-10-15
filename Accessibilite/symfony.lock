@@ -8,7 +8,7 @@
             "ref": "5d454ec6cc4c700ed3d963f3803e1d427d9669fb"
         },
         "files": [
-            "public/.htaccess"
+            "./public/.htaccess"
         ]
     },
     "symfony/console": {

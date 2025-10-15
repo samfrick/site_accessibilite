@@ -16,18 +16,7 @@
         Accueil
       </a>
     </li>
-
-    <!-- pays avec sous-menu -->
-    <li class="relative group focus-within:z-20">
-      <div class="flex items-center">
-        <span class="mx-2 text-gray-400">></span>
-
-          <li><a href="{{ path('reunion') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Ile Maurice</a></li>
-
-        </ul>
-      </div>
-    </li>
-
+    
     <!-- affichage nom du plat -->
     <li class="relative group focus-within:z-20">
       <div class="flex items-center">
@@ -45,10 +34,36 @@
 </nav>
 <!--Fin du fil d'arianne-->
 
-<p>Le dahl puri est une galette (un puri) à 
-  base de pois cassés (dal) originaire d'Inde, qui fait partie de la cuisine mauricienne et de la cuisine antillaise. 
-  Dhal puri. Le dholl puri est une icône à Maurice.</p>
+<div class="max-w-4xl mx-auto my-12 bg-white rounded-lg shadow-lg overflow-hidden">
+  
+  <!-- Conteneur flex -->
+  <div class="flex flex-col md:flex-row items-center gap-8 p-8">
+    
+    <!-- Image -->
+    <div class="flex-shrink-0">
+      <img 
+        src="/uploads/dhal-puri.webp" 
+        alt="Photo du Dhal Puri, une galette mauricienne traditionnelle" 
+        class="w-48 h-48 object-cover rounded-lg shadow-md"
+      >
+    </div>
 
+    <!-- Texte -->
+    <div class="text-gray-800 leading-relaxed">
+      <h1 class="text-3xl font-bold text-blue-700 mb-4">Dhal Puri</h1>
+      <p class="text-lg">
+        Le <strong>dahl puri</strong> est une galette moelleuse à base de <strong>pois cassés (dal)</strong>, 
+        originaire d’Inde. Il occupe une place emblématique dans la 
+        <strong>cuisine mauricienne.</strong>
+      </p>
+      <p class="mt-4 text-lg">
+        Considéré comme une véritable <em>icône culinaire</em> à Maurice, 
+        le <strong>dholl puri</strong> se déguste généralement garni de caris, 
+        de chutneys et de piments, offrant un mélange savoureux et parfumé.
+      </p>
+    </div>
+  </div>
+</div>
 
 
 {% endblock %}

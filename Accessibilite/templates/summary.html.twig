@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+{% block title %}Résumé{% endblock %}
+
+{% block main %}
+<div class="text-center w-[80%] flex flex-col items-center mx-auto mt-8">
+    <h1 class="h1 font-bold">Résumé de votre message</h1>
+    <div class="summary bg-white p-4 rounded shadow text-left" aria-live="polite">
+        <p><strong>Nom :</strong> <span id="summary-name"></span></p>
+        <p><strong>Email :</strong> <span id="summary-email"></span></p>
+        <p><strong>Message :</strong> <span id="summary-message"></span></p>
+    </div>
+
+    <div class="actions flex flex-col gap-2 mt-5">
+        <a href="{{ path('contact') }}" class="btn btn-primary">Retourner au formulaire de contact</a>
+        <a href="{{ path('home') }}" class="btn btn-secondary">Retourner à la page d’accueil</a>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const name = localStorage.getItem('contact_name');
+      const email = localStorage.getItem('contact_email');
+      const message = localStorage.getItem('contact_message');
+
+      document.getElementById('summary-name').textContent = name || '—';
+      document.getElementById('summary-email').textContent = email || '—';
+      document.getElementById('summary-message').textContent = message || '—';
+    });
+  </script>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+{% block title %}Contact{% endblock %}
+
+{% block main %}
+<!-- Début du fil d'arianne -->
+<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+
+        <li class="inline-flex items-center">
+            <a href="{{ path('home') }}"
+                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+                Accueil
+            </a>
+            <span class="mx-2 text-gray-400">></span>
+        </li>
+
+        <li class="relative group focus-within:z-20">
+            <div class="flex items-center">
+                <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Contact</p>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+<!-- Contenu principal de la page -->
+<div id="mainContent" class="text-center w-[80%] flex flex-col items-center mx-auto">
+    <h1 class="h1 font-bold">Contactez-nous</h1>
+    <p class="mb-8">Pour toute question ou suggestion, n'hésitez pas à nous contacter via le formulaire ci-dessous.</p>
+
+    <form id="contactForm" action="{{ path('contact') }}" method="post" class="form mb-8 text-left" novalidate>
+        <div class="mb-4 fieldset">
+            <label for="name" class="block text-gray-700 font-bold mb-2">Nom :*</label>
+            <input type="text" id="name" name="name" required aria-describedby="name-error"
+                class="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#3ca0e7]">
+            <p id="name-error" class="text-red-600 mt-1 text-sm hidden" aria-live="polite">Veuillez entrer votre nom.
+            </p>
+        </div>
+        <div class="mb-4 fieldset">
+            <label for="email" class="block text-gray-700 font-bold mb-2">Email :*</label>
+            <input type="email" id="email" name="email" required aria-describedby="email-error"
+                class="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#3ca0e7]">
+            <p id="email-error" class="text-red-600 mt-1 text-sm hidden" aria-live="polite">Veuillez entrer un email
+                valide.</p>
+        </div>
+        <div class="mb-4 fieldset">
+            <label for="message" class="block text-gray-700 font-bold mb-2">Message :*</label>
+            <p id="message-help" class="text-gray-500 text-sm">Maximum 300 caractères.</p>
+            <textarea id="message" name="message" rows="5" required maxlength="300"
+                aria-describedby="message-counter message-error"
+                class="w-full border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-[#3ca0e7]"></textarea>
+            <p id="message-counter" class="text-gray-500 text-sm mt-1" aria-live="polite">
+                0 / 300
+            </p>
+            <p id="message-error" class="text-red-600 mt-1 text-sm hidden" aria-live="polite">Veuillez entrer votre
+                message.</p>
+        </div>
+        <button type="submit"
+            class="bg-[#3ca0e7] text-white font-bold py-2 px-4 rounded hover:bg-[#3390d6] focus:outline-none focus:ring-2 focus:ring-[#3ca0e7]">Envoyer</button>
+    </form>
+
+</div>
+
+{% endblock %}
