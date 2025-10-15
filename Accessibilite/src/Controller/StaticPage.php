@@ -82,4 +82,9 @@ class StaticPage extends AbstractController
 	public function summary(): Response{
 		return $this->render('summary.html.twig');
 	}
+
+	#[Route('/plansite', name: 'plansite')]
+	public function plansite(): Response{
+		return $this->render('plansite.html.twig');
+	}
 }
