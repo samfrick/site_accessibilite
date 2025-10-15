@@ -1,31 +1,116 @@
 {% extends "base.html.twig" %}
 
+{% block title %}Les Pierogi - Raviolis traditionnels polonais{% endblock %}
+
 {% block main %}
+<div class="max-w-4xl mx-auto px-4 py-8">
+    
+    {# En-tête de la page #}
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Les Pierogi</h1>
+        <p class="text-xl text-gray-700">Raviolis traditionnels de la cuisine polonaise</p>
+    </header>
 
-<h1>Pierogi page</h1>
-<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    {# Fil d'Ariane #}
+    <nav aria-label="Fil d'Ariane" class="mb-8">
+        <ol class="flex items-center space-x-2 text-sm">
+            <li>
+                <a href="{{ path('home') }}" 
+                   class="text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1">
+                    Accueil
+                </a>
+            </li>
+            <li aria-hidden="true" class="text-gray-400">/</li>
+            <li>
+                <span class="text-gray-600" aria-current="page">Pierogi</span>
+            </li>
+        </ol>
+    </nav>
 
-    <!-- Accueil -->
-    <li class="inline-flex items-center">
-      <a href="{{ path('home') }}"
-        class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
-        Accueil
-      </a>
-    </li>
+    {# Image principale avec texte alternatif descriptif #}
+    <figure class="mb-8">
+        <img src="{{ asset('uploads/pierogi.jpg') }}" 
+             alt="Assiette de pierogi, accompagnés de crème et d'oignons caramélisés"
+             class="w-full rounded-lg shadow-lg"
+             loading="lazy">
+        <figcaption class="text-sm text-gray-600 mt-2 text-center">
+            Pierogi traditionnels servis avec de la crème
+        </figcaption>
+    </figure>
 
-    <!-- affichage nom du plat -->
-    <li class="relative group focus-within:z-20">
-      <div class="flex items-center">
-        <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Pierogi</p>
-      </div>
-    </li>
-  </ol>
-</nav>
+    {# Contenu principal structuré #}
+    <article>
+        
+        {# Introduction #}
+        <section aria-labelledby="introduction">
+            <h2 id="introduction" class="text-3xl font-semibold text-gray-900 mb-4">Qu'est-ce que les pierogi ?</h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                Les pierogi sont des raviolis traditionnels de la cuisine polonaise, considérés comme l'un des plats nationaux du pays. Ils se présentent sous la forme de demi-lunes réalisées à partir d'une pâte à base de farine, d'eau chaude, parfois enrichie d'œuf ou d'huile, puis farcies avec une grande variété d'ingrédients, aussi bien salés que sucrés.
+            </p>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                Ces délicieuses bouchées peuvent être bouillies, poêlées ou cuites au four, et sont souvent servies avec de la crème, du beurre fondu ou des oignons caramélisés.
+            </p>
+        </section>
 
-<p>Les pierogi sont des raviolis traditionnels de la cuisine polonaise, considérés comme l'un des plats nationaux du
-  pays. Ils se présentent sous la forme de demi-lunes réalisées à partir d'une pâte à base de farine, d'eau chaude,
-  parfois enrichie d'œuf ou d'huile, puis farcies avec une grande variété d'ingrédients, aussi bien salés que sucrés.
-</p>
+        {# Types de pierogi #}
+        <section aria-labelledby="types" class="mt-8">
+            <h2 id="types" class="text-3xl font-semibold text-gray-900 mb-4">Les différents types de pierogi</h2>
+            
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Pierogi salés</h3>
+            <ul class="space-y-3 text-gray-700 ml-6">
+                <li class="flex items-start">
+                    <span class="mr-2 text-blue-600" aria-hidden="true">•</span>
+                    <div>
+                        <strong lang="pl">Ruskie pierogi</strong> : Farcis de pommes de terre, fromage blanc et oignons. C'est la variété la plus populaire.
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-2 text-blue-600" aria-hidden="true">•</span>
+                    <div>
+                        <strong lang="pl">Pierogi</strong> à la viande : Garnis de viande hachée épicée, souvent du bœuf ou du porc.
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-2 text-blue-600" aria-hidden="true">•</span>
+                    <div>
+                        <strong lang="pl">Pierogi</strong> aux champignons et choux : Une option végétarienne traditionnelle, particulièrement populaire pendant les fêtes.
+                    </div>
+                </li>
+            </ul>
 
+            <h3 class="text-2xl font-semibold text-gray-800 mb-3 mt-6">Pierogi sucrés</h3>
+            <ul class="space-y-3 text-gray-700 ml-6">
+                <li class="flex items-start">
+                    <span class="mr-2 text-blue-600" aria-hidden="true">•</span>
+                    <div>
+                        <strong lang="pl">Pierogi</strong> aux fruits : Farcis de fraises, myrtilles ou cerises, souvent servis avec de la crème sucrée.
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <span class="mr-2 text-blue-600" aria-hidden="true">•</span>
+                    <div>
+                        <strong lang="pl">Pierogi</strong> au fromage blanc sucré : Garnis de <span lang="pl">twaróg</span> (fromage blanc polonais) mélangé avec du sucre et parfois de la vanille.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        {# Conseils #}
+        <section aria-labelledby="conseils" class="mt-8 bg-blue-50 p-6 rounded-lg">
+            <h2 id="conseils" class="text-2xl font-semibold text-gray-900 mb-4">Conseils de dégustation</h2>
+            <p class="text-gray-700 mb-3 leading-relaxed">
+                Les pierogi peuvent être dégustés de plusieurs manières selon les traditions et les goûts personnels.
+            </p>
+            <p class="text-gray-700 mb-3 leading-relaxed">
+                Pour les pierogi salés, les accompagnements classiques incluent la crème, les oignons caramélisés, le beurre fondu ou les lardons croustillants. Certains préfèrent les faire dorer à la poêle après cuisson pour obtenir une texture croustillante.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Les pierogi sucrés sont généralement servis avec de la crème sucrée, du sucre glace ou un filet de miel.
+            </p>
+        </section>
+
+    </article>
+
+
+</div>
 {% endblock %}
