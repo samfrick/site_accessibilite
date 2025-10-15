@@ -84,3 +84,226 @@ input[type="checkbox"], input[type="radio"] {
     height: 10rem;
     margin-bottom: 2px;
 }
+
+/* ========================================
+   STYLES POUR LA PAGE AMERICAIN
+   ======================================== */
+
+/* Conteneur principal */
+#mainContent {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Styles pour les titres */
+#mainContent h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+#mainContent h2 {
+    font-size: 2rem;
+    margin: 2.5rem 0 1.5rem 0;
+    text-align: center;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+/* Description du plat */
+#mainContent > p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 1.5rem 0;
+    color: #374151;
+    max-width: 900px;
+}
+
+/* Section média (image + vidéo) */
+#mainContent > div:has(img) {
+    display: flex;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#mainContent img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mainContent img:hover,
+#mainContent img:focus {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Vidéo iframe */
+#mainContent iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+/* Lien tableau accessible */
+#mainContent a[href*="tableau"] {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#mainContent a[href*="tableau"]:hover,
+#mainContent a[href*="tableau"]:focus {
+    background-color: #2563eb;
+    outline: 2px solid #1e40af;
+    outline-offset: 2px;
+}
+
+/* Tableau */
+#mainContent table {
+    margin: 2rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+#mainContent table thead {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+#mainContent table th {
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: center;
+    border: none;
+}
+
+#mainContent table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+#mainContent table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+#mainContent table tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+#mainContent table tbody tr:focus-within {
+    background-color: #dbeafe;
+    outline: 2px solid #3b82f6;
+}
+
+#mainContent table td,
+#mainContent table th[scope="rowgroup"] {
+    padding: 0.875rem 1rem;
+    border: 1px solid #e5e7eb;
+}
+
+#mainContent table th[scope="rowgroup"] {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: left;
+}
+
+/* Prix en gras */
+#mainContent table td:last-child {
+    font-weight: 600;
+    color: #059669;
+}
+
+/* Section commande */
+#mainContent #PostTableau {
+    margin-top: 3rem;
+    color: #dc2626;
+}
+
+#mainContent > p:last-child {
+    background-color: #fef2f2;
+    border-left: 4px solid #dc2626;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #mainContent {
+        padding: 1rem;
+    }
+
+    #mainContent h1 {
+        font-size: 2rem;
+    }
+
+    #mainContent h2 {
+        font-size: 1.5rem;
+    }
+
+    #mainContent > div:has(img) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #mainContent img {
+        max-width: 100%;
+    }
+
+    #mainContent iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    #mainContent table {
+        font-size: 0.875rem;
+    }
+
+    #mainContent table th,
+    #mainContent table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Amélioration de l'accessibilité au focus */
+#mainContent *:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Fil d'Ariane */
+nav[aria-label="Fil d'Ariane"] {
+    padding: 1rem 2rem;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+nav[aria-label="Fil d'Ariane"] a:focus,
+nav[aria-label="Fil d'Ariane"] button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
