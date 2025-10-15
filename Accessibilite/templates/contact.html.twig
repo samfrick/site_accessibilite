@@ -15,17 +15,19 @@
         </li>
 
         <li class="relative group focus-within:z-20">
-            <a href="{{ path('contact') }}"
-                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">Contact</a>
+            <div class="flex items-center">
+                <p type="button" aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Contact</p>
+            </div>
         </li>
     </ol>
 </nav>
 
+<!-- Contenu principal de la page -->
 <div id="mainContent" class="text-center w-[80%] flex flex-col items-center mx-auto">
     <h1 class="h1 font-bold">Contactez-nous</h1>
     <p class="mb-8">Pour toute question ou suggestion, n'hésitez pas à nous contacter via le formulaire ci-dessous.</p>
 
-    <form action="{{ path('contact') }}" method="post" class="form mb-8 text-left" novalidate>
+    <form id="contactForm" action="{{ path('contact') }}" method="post" class="form mb-8 text-left" novalidate>
         <div class="mb-4 fieldset">
             <label for="name" class="block text-gray-700 font-bold mb-2">Nom :*</label>
             <input type="text" id="name" name="name" required aria-describedby="name-error"

@@ -31,3 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mise à jour à chaque saisie
     textarea.addEventListener("input", updateCounter);
 });
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // On récupère les valeurs
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // On les stocke temporairement dans localStorage
+    localStorage.setItem('contact_name', name);
+    localStorage.setItem('contact_email', email);
+    localStorage.setItem('contact_message', message);
+
+    // On redirige vers la page de résumé
+    window.location.href = 'summary';
+});
+
+
