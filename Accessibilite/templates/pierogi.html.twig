@@ -14,33 +14,6 @@
       </a>
     </li>
 
-    <!-- France avec sous-menu -->
-    <li class="relative group focus-within:z-20">
-      <div class="flex items-center">
-        <span class="mx-2 text-gray-400">></span>
-        <button
-          type="button"
-          aria-haspopup="menu"
-          aria-expanded="false"
-          class="ml-1 text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7] focus:outline-none group-hover:text-[#3ca0e7]"
-        >
-          France <span class="ml-1">&#9662;</span>
-        </button>
-        <ul
-          class="absolute top-full left-0 min-w-[120px] bg-white rounded shadow-lg opacity-0 invisible 
-                 group-hover:opacity-100 group-hover:visible 
-                 group-focus-within:opacity-100 group-focus-within:visible 
-                 transition-all duration-200 z-10"
-          role="menu"
-        >
-          <li><a href="{{ path('flams') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">France</a></li>
-          <li><a href="{{ path('americain') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Réunion</a></li>
-          <li><a href="{{ path('pierogi') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Pologne</a></li>
-          <li><a href="{{ path('dahl') }}" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 focus:bg-blue-100" role="menuitem">Maurice</a></li>
-        </ul>
-      </div>
-    </li>
-
     <!-- affichage nom du plat -->
     <li class="relative group focus-within:z-20">
             <div class="flex items-center">
