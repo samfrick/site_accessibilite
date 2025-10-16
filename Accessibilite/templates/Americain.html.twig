@@ -4,7 +4,7 @@
 
 {% block main %}
 <!-- Skip link -->
-
+<div class="max-w-4xl mx-auto w-full flex justify-start px-4 mt-4">
 <!--Fil d'ariiane -->
 <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
   <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -13,7 +13,7 @@
     <li class="inline-flex items-center">
       <a href="{{ path('home') }}"
         class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
-        Accueil
+        Accueil &raquo;
       </a>
     </li>
 
@@ -25,6 +25,7 @@
     </li>
   </ol>
 </nav>
+</div>
 <!--Fin du fil d'arianne-->
 
 <div id="mainContent" class="flex flex-col justify-center items-center p-10">

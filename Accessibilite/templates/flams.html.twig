@@ -3,25 +3,27 @@
 
 {% block main %}
 <!-- Début du fil d'arianne -->
-<nav class="flex text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+<div class="max-w-4xl mx-auto w-full flex justify-start px-4 mt-4">
+  <nav class="flex text-sm text-gray-600" aria-label="Fil d'Ariane">
     <ol class="inline-flex items-center space-x-1 md:space-x-3">
 
-        <li class="inline-flex items-center">
-            <a href="{{ path('home') }}"
-                class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
-                Accueil
-            </a>
-            <span class="mx-2 text-gray-400">></span>
-        </li>
+      <!-- Accueil -->
+      <li class="inline-flex items-center">
+        <a href="{{ path('home') }}"
+          class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+          Accueil &raquo;
+        </a>
+      </li>
 
-        <li class="relative group focus-within:z-20">
-            <div class="flex items-center">
-                <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Flams</p>
-            </div>
-        </li>
+      <!-- Nom de la page -->
+      <li class="relative group focus-within:z-20">
+        <div class="flex items-center">
+          <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Flam’s</p>
+        </div>
+      </li>
     </ol>
-</nav>
-
+  </nav>
+</div>
 <!-- Contenu principal de la page -->
 <div id="mainContent" class="text-center w-[80%] flex flex-col items-center mx-auto">
     <h1 class="h1 font-bold">Bienvenue sur la page dédiée aux Flam's</h1>
