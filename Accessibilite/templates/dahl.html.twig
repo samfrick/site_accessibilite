@@ -1,59 +1,103 @@
 {% extends 'base.html.twig' %}
 {% block title %}Dhal Puri{% endblock %}
 
-
 {% block main %}
-<!-- Skip link -->
+<div class="max-w-4xl mx-auto px-4 py-8">
 
-<!--Fil d'ariiane -->
-<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
-  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+  <!--Fil d'ariane -->
+  <nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3">
 
-    <!-- Accueil -->
-    <li class="inline-flex items-center">
-      <a href="{{ path('home') }}"
-        class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
-        Accueil
-      </a>
-    </li>
+      <!-- Accueil -->
+      <li class="inline-flex items-center">
+        <a href="{{ path('home') }}"
+          class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+          Accueil &raquo;
+        </a>
+      </li>
 
-    <!-- affichage nom du plat -->
-    <li class="relative group focus-within:z-20">
-      <div class="flex items-center">
-        <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Dhal Puri</p>
+      <!-- affichage nom du plat -->
+      <li class="relative group focus-within:z-20">
+        <div class="flex items-center">
+          <p aria-haspopup="menu" aria-expanded="false" class="ml-1 text-gray-600">Dhal Puri</p>
+        </div>
+      </li>
+    </ol>
+  </nav>
+  <!--Fin du fil d'ariane-->
+
+  <!-- Section présentation -->
+  <div class="max-w-4xl mx-auto my-12 bg-white rounded-lg shadow-lg overflow-hidden">
+    <div class="flex flex-col md:flex-row items-center gap-8 p-8">
+      <div class="flex-shrink-0">
+        <img src="/uploads/dhal-puri.webp" alt="Photo du Dhal Puri, une galette mauricienne traditionnelle"
+          class="w-48 h-48 object-cover rounded-lg shadow-md">
       </div>
-    </li>
-  </ol>
-</nav>
-<!--Fin du fil d'arianne-->
 
-<div class="max-w-4xl mx-auto my-12 bg-white rounded-lg shadow-lg overflow-hidden">
-
-  <!-- Conteneur flex -->
-  <div class="flex flex-col md:flex-row items-center gap-8 p-8">
-
-    <!-- Image -->
-    <div class="flex-shrink-0">
-      <img src="/uploads/dhal-puri.webp" alt="Photo du Dhal Puri, une galette mauricienne traditionnelle"
-        class="w-48 h-48 object-cover rounded-lg shadow-md">
-    </div>
-
-    <!-- Texte -->
-    <div class="text-gray-800 leading-relaxed">
-      <h1 class="text-3xl font-bold text-blue-700 mb-4">Dhal Puri</h1>
-      <p class="text-lg">
-        Le <strong>dahl puri</strong> est une galette moelleuse à base de <strong>pois cassés (dal)</strong>,
-        originaire d’Inde. Il occupe une place emblématique dans la
-        <strong>cuisine mauricienne.</strong>
-      </p>
-      <p class="mt-4 text-lg">
-        Considéré comme une véritable <em>icône culinaire</em> à Maurice,
-        le <strong>dholl puri</strong> se déguste généralement garni de caris,
-        de chutneys et de piments, offrant un mélange savoureux et parfumé.
-      </p>
+      <div class="text-gray-800 leading-relaxed">
+        <h1 class="text-3xl font-bold text-blue-700 mb-4">Dhal Puri</h1>
+        <p class="text-lg">
+          Le <strong>dhal puri</strong> est une galette moelleuse à base de <strong>pois cassés (dal)</strong>,
+          originaire d’Inde, devenue au fil du temps un emblème de la <strong>cuisine mauricienne</strong>.
+        </p>
+        <p class="mt-4 text-lg">
+          Considéré comme une véritable <em>icône culinaire</em> de l’île Maurice,
+          le <strong>dholl puri</strong> se déguste chaud, souvent garni de caris de légumes ou de viande,
+          accompagné de chutneys épicés et d’un peu de piment. C’est un plat de rue apprécié par toutes les générations.
+        </p>
+      </div>
     </div>
   </div>
+
+  <!-- Section histoire -->
+  <section class="bg-gray-50 p-8 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Origines et Histoire</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Le Dhal Puri trouve ses racines dans la cuisine indienne, plus précisément dans les régions du Bihar et de
+      l’Uttar Pradesh. Les travailleurs engagés indiens arrivés à l’île Maurice au XIXe siècle ont apporté leurs
+      traditions culinaires, et le dhal puri est rapidement devenu un plat emblématique de l’île.
+    </p>
+    <p class="mt-4 text-gray-700 leading-relaxed">
+      À Maurice, il a évolué pour devenir une version plus fine et souple de la galette originale indienne,
+      souvent préparée sur de grandes plaques de cuisson en plein air. Aujourd’hui, le dhal puri est l’un des plats
+      de rue les plus consommés du pays, vendu dans presque chaque village.
+    </p>
+  </section>
+
+  <!-- Section préparation -->
+  <section class="bg-white p-8 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Préparation traditionnelle</h2>
+    <p class="text-gray-700 leading-relaxed">
+      La pâte du dhal puri est faite à base de farine de blé, d’eau et d’un peu d’huile, tandis que la farce est composée
+      de <strong>pois cassés jaunes bouillis et réduits en purée</strong>, assaisonnés avec du cumin et du curcuma.
+    </p>
+    <ul class="list-disc list-inside mt-4 text-gray-700">
+      <li>Les pois cassés sont d’abord cuits, séchés puis broyés.</li>
+      <li>Ils sont ensuite incorporés dans la pâte avant d’être aplatis en fines galettes.</li>
+      <li>Les dhal puris sont cuits sur une plaque chaude appelée <em>tawa</em> avec un peu de ghee (beurre clarifié).</li>
+    </ul>
+    <p class="mt-4 text-gray-700">
+      Le résultat : une galette fine, souple et légèrement dorée, parfaite pour être garnie et roulée.
+    </p>
+  </section>
+
+  <!-- Section dégustation -->
+  <section class="bg-gray-50 p-8 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Comment le déguster ?</h2>
+    <p class="text-gray-700 leading-relaxed">
+      À Maurice, le dhal puri se déguste souvent en duo, roulé et garni de préparations locales :
+    </p>
+    <ul class="list-disc list-inside mt-4 text-gray-700">
+      <li><strong>Cari gros pois</strong> (haricots au curry)</li>
+      <li><strong>Cari pomme de terre</strong></li>
+      <li><strong>Rougaille tomate</strong> (sauce tomate épicée)</li>
+      <li>Et toujours un peu de <strong>piment écrasé</strong> pour relever le goût !</li>
+    </ul>
+    <p class="mt-4 text-gray-700">
+      C’est un plat à la fois simple, nourrissant et convivial, qu’on trouve dans les food trucks, les marchés et les
+      échoppes de rue mauriciennes.
+    </p>
+  </section>
+
 </div>
-
-
 {% endblock %}

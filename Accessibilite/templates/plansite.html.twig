@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    {# Navigation principale du plan du site — landmark et aria-label #}
+    <nav aria-label="Plan du site" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="navigation">
+      <!-- Colonne 1 -->
+      <div>
+        <h3 class="text-lg font-medium mb-3">Général</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="{{ path('home') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Accueil">
+              Accueil
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('contact') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne 2 -->
+      <div>
+        <h3 class="text-lg font-medium mb-3">Contenus</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="{{ path('pierogi') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Blog">
+              Pierogi
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('dahl') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Foire aux questions">
+              Dahl
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('flams') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Centre d'aide">
+              Flams
+            </a>
+          </li>
+          <li>
+            <a href="{{ path('americain') }}" class="block px-2 py-1 rounded hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Centre d'aide">
+              Américain bouchon
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {# Liens légaux #}
+    <section class="mt-12 border-t pt-6">
+      <h2 class="sr-only">Informations légales</h2>
+      <ul class="flex flex-col sm:flex-row gap-4 text-sm text-gray-600">
+        <li><a href="{{ path('cgu') }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Politique de confidentialité">Conditions générales d'utilisation</a></li>
+        <li><a href="{{ path('mentionslegales') }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Conditions d'utilisation">Mentions légales</a></li>
+        <li><a href="{{ path('accesibilite') }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Accessibilité">Accessibilité</a></li>
+        <li><a href="{{ path('rgpd') }}" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500" title="Accessibilité">RGPD</a></li>
+    </ul>
+    </section>
+{% endblock %}

@@ -5,31 +5,30 @@
 {% block main %}
 <div class="max-w-4xl mx-auto px-4 py-8">
     
-    {# En-tête de la page #}
-    <header class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Les Pierogi</h1>
-        <p class="text-xl text-gray-700">Raviolis traditionnels de la cuisine polonaise</p>
-    </header>
-
-    {# Fil d'Ariane #}
+  {# Fil d'Ariane #}
     <nav aria-label="Fil d'Ariane" class="mb-8">
         <ol class="flex items-center space-x-2 text-sm">
             <li>
                 <a href="{{ path('home') }}" 
-                   class="text-blue-600 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded px-1">
-                    Accueil
+                   class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+                    Accueil &raquo;
                 </a>
             </li>
-            <li aria-hidden="true" class="text-gray-400">/</li>
             <li>
                 <span class="text-gray-600" aria-current="page">Pierogi</span>
             </li>
         </ol>
     </nav>
 
+    {# En-tête de la page #}
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Les Pierogi</h1>
+        <p class="text-xl text-gray-700">Raviolis traditionnels de la cuisine polonaise</p>
+    </header>
+
     {# Image principale avec texte alternatif descriptif #}
     <figure class="mb-8">
-        <img src="{{ asset('uploads/pierogi.jpg') }}" 
+        <img src="/uploads/pierogi.jpg" 
              alt="Assiette de pierogi, accompagnés de crème et d'oignons caramélisés"
              class="w-full rounded-lg shadow-lg"
              loading="lazy">
