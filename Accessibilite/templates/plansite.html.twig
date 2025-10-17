@@ -1,7 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+<!--Fil d'ariiane -->
+<div class="max-w-4xl mx-auto w-full flex justify-start px-4 mt-4">
+<nav class="flex items-center text-sm text-gray-600 mt-4" aria-label="Fil d'Ariane">
+  <ol class="inline-flex items-center space-x-1 md:space-x-3">
+    
+    <!-- Accueil -->
+    <li class="inline-flex items-center">
+      <a href="{{ path('home') }}" 
+         class="inline-flex items-center text-gray-600 hover:text-[#3ca0e7] focus:text-[#3ca0e7]">
+        Accueil &raquo;
+      </a>
+    </li>
+
+    <!-- affichage nom du plat -->
+    <li class="relative group focus-within:z-20">
+      <div class="flex items-center">
+        <button
+          type="button"
+          aria-haspopup="menu"
+          aria-expanded="false"
+          class="ml-1 text-gray-600">
+          Plan du site <span class="ml-1"></span>
+        </button> 
+      </div>
+    </li>
+  </ol>
+</nav>
+</div>
+
     {# Navigation principale du plan du site — landmark et aria-label #}
+    
     <nav aria-label="Plan du site" class="grid grid-cols-1 md:grid-cols-3 gap-8" role="navigation">
       <!-- Colonne 1 -->
       <div>
